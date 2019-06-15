@@ -174,9 +174,9 @@ exit:
 }
 
 template<class ImplClass>
-WEAVE_ERROR GenericConfigurationManagerImpl<ImplClass>::_StoreSerialNumber(const char * serialNum)
+WEAVE_ERROR GenericConfigurationManagerImpl<ImplClass>::_StoreSerialNumber(const char * serialNum, size_t serialNumLen)
 {
-    return Impl()->WriteConfigValueStr(ImplClass::kConfigKey_SerialNum, serialNum);
+    return Impl()->WriteConfigValueStr(ImplClass::kConfigKey_SerialNum, serialNum, serialNumLen);
 }
 
 template<class ImplClass>
@@ -263,9 +263,9 @@ exit:
 }
 
 template<class ImplClass>
-WEAVE_ERROR GenericConfigurationManagerImpl<ImplClass>::_StoreManufacturingDate(const char * mfgDate)
+WEAVE_ERROR GenericConfigurationManagerImpl<ImplClass>::_StoreManufacturingDate(const char * mfgDate, size_t mfgDateLen)
 {
-    return Impl()->WriteConfigValueStr(ImplClass::kConfigKey_ManufacturingDate, mfgDate);
+    return Impl()->WriteConfigValueStr(ImplClass::kConfigKey_ManufacturingDate, mfgDate, mfgDateLen);
 }
 
 template<class ImplClass>
@@ -357,9 +357,9 @@ exit:
 }
 
 template<class ImplClass>
-WEAVE_ERROR GenericConfigurationManagerImpl<ImplClass>::_StorePairingCode(const char * pairingCode)
+WEAVE_ERROR GenericConfigurationManagerImpl<ImplClass>::_StorePairingCode(const char * pairingCode, size_t pairingCodeLen)
 {
-    return Impl()->WriteConfigValueStr(ImplClass::kConfigKey_PairingCode, pairingCode);
+    return Impl()->WriteConfigValueStr(ImplClass::kConfigKey_PairingCode, pairingCode, pairingCodeLen);
 }
 
 template<class ImplClass>
